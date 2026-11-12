@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: felül a szegmens-hőmérő (meleg → hűvös, plusz welcome és kampány), alatta bal oldalt a levélpárok A/B fülekkel, jobbra az élő előnézet és a teszt jegyzete. */
+/* Layout: felül a szegmens-hőmérő (meleg → hűvös, plusz kampány), alatta bal oldalt a levélpárok A/B fülekkel, jobbra az élő előnézet és a teszt jegyzete. */
 :root{
   --bg:#eef4f3; --surface:#ffffff; --ink:#1f2937; --muted:#5f6b6a; --line:#dbe7e5;
   --brand:#21514e; --teal:#199488; --turq:#5bcbc6; --mint:#eaf6f5; --warn:#b45309;
@@ -52,7 +52,7 @@ h1{margin:0;font-size:28px;line-height:1.15;font-weight:800;color:var(--brand);t
 .how b{color:var(--ink)}
 .groups{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-bottom:14px}
 .group{grid-column:span 12;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px;min-width:0}
-@media (min-width:900px){.group.g-a{grid-column:span 5}.group.g-b{grid-column:span 7}.group.g-c{grid-column:span 3}.group.g-d{grid-column:span 6}.group.g-e{grid-column:span 3}}
+@media (min-width:900px){.group.g-a{grid-column:span 5}.group.g-b{grid-column:span 7}.group.g-c{grid-column:span 3}.group.g-d{grid-column:span 9}}
 .code{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.02em;background:var(--brand);color:var(--surface);padding:2px 7px;border-radius:6px;margin-right:6px;vertical-align:1px}
 .seg .code{font-size:11px;margin:6px 0 0}
 .ab .code{background:transparent;color:inherit;padding:0;font-size:12.5px}
@@ -124,13 +124,13 @@ iframe.mobile{width:390px;border-radius:26px;box-shadow:0 0 0 10px #1f2937}
 <header class="topbar">
   <div class="topbar-in">
     <div class="by"><img src="doupla-logo.png" width="44" height="44" alt="DOUPLA"><span>by <b>DOUPLA</b> Creative &amp; Digital</span></div>
-    <div class="for">Tomex Gourmet · karácsony 2026 · hírlevél-előnézet</div>
+    <div class="for">Tomex Gourmet · karácsony 2026 · hírlevél-előnézet · <b style="color:#E6F1EF;font-family:var(--mono);font-weight:500;background:#21514E;padding:2px 8px;border-radius:6px;white-space:nowrap">v56 · 2026. 11. 12.</b></div>
   </div>
 </header>
 <div class="wrap">
   <h1>Tomex Gourmet karácsonyi hírlevelek</h1>
   <p class="lead">Itt látszik az összes levél úgy, ahogy a címzett megkapja. EmailOctopusból megy: a saját ügyféllistára (egy üzenet, több sablon A/B tesztre) és a WellData-listákra, ahol minden szegmens saját levelet kap. Minden levélnek van egy kódja; ugyanez áll a státusztáblában és a linkek utm_content mezőjének elején.</p>
-  <p class="lead" style="margin-top:-8px;font-size:13.5px"><b style="color:var(--brand)">Frissítve november 10-én:</b> a Mikulás-levél öt hangnemben (HL01-A–E) és négy WellData-szegmensre, a meleg levél egy üzenetként három sablonban (HL02-A–C), a hideg három WellData-szegmensre (HL04), mindenhol a mai határidők (Mikulás november 23., gourmet december 5.), központi aláírás és „díjmentes logózás”.</p>
+  <p class="lead" style="margin-top:-8px;font-size:13.5px"><b style="color:var(--brand)">Frissítve november 12-én:</b> Farkas Tamás kérései minden levélben: a fő üzenet a kollégák megajándékozása, az egy számla és a több cím másodlagos. A Mikulás-leveleknél „illetve a készlet erejéig” és kiemelt „már nettó 2 360 Ft-tól”, a hero kép a mikuláscsomag-kategóriára visz. A díjmentes logózás *-gal megy, a lábléc első sora a feltétel (csak egyszínű logónyomtatás). Kikerült a „deadline”, a „hotfix” és a home office-os szűkítés, az automatikus welcome levél (HL07) pedig a galériából.</p>
 
   <ol class="how" aria-label="Hogyan nézd">
     <li><b>Válassz csoportot</b> lent: kinek szól a levél, és mikor megy ki.</li>
@@ -138,7 +138,7 @@ iframe.mobile{width:390px;border-radius:26px;box-shadow:0 0 0 10px #1f2937}
     <li><b>Nézd meg asztalin és mobilon.</b> A „Mintaadat” egy kitalált címzettel tölti ki, az „Éles” az EmailOctopus mezőit mutatja.</li>
   </ol>
 
-  <div class="codes"><b>Kódok.</b> HL + kampányszám, utána a változat: betű = párhuzamos változat (A/B teszt), szám = a sorozat része, KONY / SZOF / UGYV / IDOS = WellData-szegmens (könyvelő, szoftvercég, ügyvédi iroda, idősek otthona).<div class="row"><span><span class="code">HL01</span>Mikulás</span><span><span class="code">HL02</span>Meleg</span><span><span class="code">HL04</span>Hideg</span><span><span class="code">HL05</span>Tíz pillanat</span><span><span class="code">HL06</span>Gourmet vs Office</span><span><span class="code">HL07</span>Welcome</span></div></div>
+  <div class="codes"><b>Kódok.</b> HL + kampányszám, utána a változat: betű = párhuzamos változat (A/B teszt), szám = a sorozat része, KONY / SZOF / UGYV / IDOS = WellData-szegmens (könyvelő, szoftvercég, ügyvédi iroda, idősek otthona).<div class="row"><span><span class="code">HL01</span>Mikulás</span><span><span class="code">HL02</span>Meleg</span><span><span class="code">HL04</span>Hideg</span><span><span class="code">HL05</span>Tíz pillanat</span><span><span class="code">HL06</span>Gourmet vs Office</span></div></div>
   <div class="groups" id="groups"></div>
 
   <details class="themes-d">
@@ -221,16 +221,17 @@ const META = [
   "layout": "Természetes, kollégás hang",
   "theme": "csapat",
   "subj": "Mikulás az irodába? November 23-ig szóljon",
-  "pre": "A céges Mikulás-rendeléseket november 23-ig várjuk. Csomagok nettó 2 360 Ft-tól.",
+  "pre": "Lepje meg kollégáit is: mikuláscsomagok már nettó 2 360 Ft-tól. Rendelés november 23-ig, illetve a készlet erejéig.",
   "subj_raw": "Mikulás az irodába? November 23-ig szóljon",
-  "pre_raw": "A céges Mikulás-rendeléseket november 23-ig várjuk. Csomagok nettó 2 360 Ft-tól.",
+  "pre_raw": "Lepje meg kollégáit is: mikuláscsomagok már nettó 2 360 Ft-tól. Rendelés november 23-ig, illetve a készlet erejéig.",
   "test": "A tárgysora a HL01-B tárgysorának párja: kérdés és határidő („Mikulás az irodába? November 23-ig szóljon”) vs. ár („Mikulás 30 kollégának nettó 70 800 Ft-ból”). Levélként a legbiztonságosabb hang a meglévő ügyfeleknek. Mind az öt sablon ugyanarra a saját listára megy, véletlenszerű bontásban.",
   "hyp": "A kérdésre és határidőre épülő tárgy többeket nyittat meg; a határidő mindkét előnézetben ott van.",
   "metric": "Megnyitás (tárgysor-teszt), kattintás, Mikulás-rendelés november 23-ig.",
   "todo": [
    "Rendelési határidő mindenhol november 23. (hétfő), a mai egyeztetés szerint. A szövegjavaslat-doksi még november 27-tel számolt.",
    "A mikuláscsomag logó nélkül készül, ezért ezekben a levelekben nincs logózási ajánlat.",
-   "A levél csak a rendelési határidőt (november 23.) kommunikálja, kiszállítási dátumot nem ír."
+   "A levél csak a rendelési határidőt (november 23.) kommunikálja, kiszállítási dátumot nem ír.",
+   "Tamás november 12-i kérései beépítve: a kollégák meglepése a fő üzenet, „már nettó 2 360 Ft-tól” kiemelve, határidő mindenhol „illetve a készlet erejéig”, a hero kép a mikuláscsomag-kategóriára visz."
   ],
   "live_fields": [
    "{{FirstName|default(\"Partnerünk\")}}"
@@ -369,20 +370,19 @@ const META = [
   "kind": "warm",
   "layout": "Szoftvercégek",
   "theme": "csapat",
-  "subj": "Mikuláscsomag a csapatnak, akár több címre",
-  "pre": "Rendelés november 23-ig, akár több címre szállítva. Csomagok nettó 2 360 Ft-tól.",
-  "subj_raw": "Mikuláscsomag a csapatnak, akár több címre",
-  "pre_raw": "Rendelés november 23-ig, akár több címre szállítva. Csomagok nettó 2 360 Ft-tól.",
-  "test": "WellData-szegmens: office manager vagy people ops olvassa. A Mikulás ok arra, hogy egy napra mindenki bejöjjön.",
-  "hyp": "A lazább, „deadline, nincs hotfix” hang ennél a közönségnél nem idegen, de önöző marad.",
+  "subj": "Mikuláscsomag a csapatnak, már nettó 2 360 Ft-tól",
+  "pre": "Lepje meg a csapatot: mikuláscsomagok már nettó 2 360 Ft-tól. Rendelés november 23-ig, illetve a készlet erejéig.",
+  "subj_raw": "Mikuláscsomag a csapatnak, már nettó 2 360 Ft-tól",
+  "pre_raw": "Lepje meg a csapatot: mikuláscsomagok már nettó 2 360 Ft-tól. Rendelés november 23-ig, illetve a készlet erejéig.",
+  "test": "WellData-szegmens: office manager vagy people ops olvassa. Az év végi közös pillanatra épít, munkarendre nem szűkít.",
+  "hyp": "A közvetlen, önöző hang ennél a közönségnél is működik; „deadline” és „hotfix” Tamás kérésére kikerült.",
   "metric": "Kattintás és rendelés a szegmensen belül.",
   "todo": [
    "Rendelési határidő mindenhol november 23. (hétfő), a mai egyeztetés szerint. A szövegjavaslat-doksi még november 27-tel számolt.",
    "A mikuláscsomag logó nélkül készül, ezért ezekben a levelekben nincs logózási ajánlat.",
    "A levél csak a rendelési határidőt (november 23.) kommunikálja, kiszállítási dátumot nem ír.",
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
-   "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon.",
-   "Több címre szállítás: a mikuláscsomagokra is érvényes? A levél erre épít."
+   "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon."
   ],
   "live_fields": []
  },
@@ -450,15 +450,16 @@ const META = [
   "layout": "Sablon A · ajánlatkérés és a három legnépszerűbb",
   "theme": "klasszikus",
   "subj": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "subj_raw": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre_raw": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre_raw": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "test": "Egy üzenet minden meglévő ügyfélnek (valamikor rendelt, de nem tudjuk, karácsonyra is rendelt-e). Ugyanaz a tárgy, a nyitás és az Ui.; csak a sablon más: az A egy válasszal kérhető ajánlatra és a három legnépszerűbb csomagra épül.",
   "hyp": "Aki már dolgozott velünk, gyorsabban dönt, ha létszám és keret alapján kérhet ajánlatot, mint ha magának kell választania.",
   "metric": "Ajánlatkérés, csomagkattintás, rendelés december 5-ig, a három sablon között összevetve.",
   "todo": [
    "A saját lista nincs bontva rendelési előzmény szerint, ezért a levél nem hivatkozik tavalyi vagy karácsonyi rendelésre.",
-   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy."
+   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy.",
+   "Tamás november 12-i kérései beépítve: díjmentes logózás a levél elején, *-gal és lábléc-feltétellel (csak egyszínű logónyomtatás), új nyitómondatok és Ui. Az Ui. „gyermekeiknek” része csak akkor maradjon, ha a webshopban van karácsonyi gyerekcsomag."
   ],
   "live_fields": [
    "{{FirstName|default(\"Partnerünk\")}}"
@@ -473,15 +474,17 @@ const META = [
   "layout": "Sablon B · keret szerint válogatva",
   "theme": "klasszikus",
   "subj": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "subj_raw": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre_raw": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre_raw": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "test": "Egy üzenet minden meglévő ügyfélnek (valamikor rendelt, de nem tudjuk, karácsonyra is rendelt-e). Ugyanaz a tárgy, a nyitás és az Ui.; csak a sablon más: a B három keretszint szerint mutatja a csomagokat.",
   "hyp": "A céges megrendelő fejében keret van, nem termék; ha a keretet kínáljuk fel, rövidebb az út a döntésig.",
   "metric": "Kattintás keretszintenként (utm_content), rendelés december 5-ig.",
   "todo": [
    "A saját lista nincs bontva rendelési előzmény szerint, ezért a levél nem hivatkozik tavalyi vagy karácsonyi rendelésre.",
-   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy."
+   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy.",
+   "Tamás november 12-i kérései beépítve: díjmentes logózás a levél elején, *-gal és lábléc-feltétellel (csak egyszínű logónyomtatás), új nyitómondatok és Ui. Az Ui. „gyermekeiknek” része csak akkor maradjon, ha a webshopban van karácsonyi gyerekcsomag.",
+   "Az első ársáv „8 ezer Ft-ig” lett: a Narancsos álom nettó 5 746 Ft, a korábbi „6–8 ezer Ft” sávba nem fért bele."
   ],
   "live_fields": [
    "{{FirstName|default(\"Partnerünk\")}}"
@@ -496,15 +499,16 @@ const META = [
   "layout": "Sablon C · mind a tíz csomag rácsban",
   "theme": "klasszikus",
   "subj": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "subj_raw": "Megvan már a kollégák karácsonyi ajándéka?",
-  "pre_raw": "Ugyanúgy intézzük, mint korábban: egy számla, akár minden kollégának külön címre. Rendelés december 5-ig.",
+  "pre_raw": "Céges ajándékcsomagok a kollégáknak és a partnereknek, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
   "test": "Egy üzenet minden meglévő ügyfélnek (valamikor rendelt, de nem tudjuk, karácsonyra is rendelt-e). Ugyanaz a tárgy, a nyitás és az Ui.; csak a sablon más: a C mind a tíz csomagot megmutatja, hero nélkül.",
   "hyp": "Aki böngészni akar, a rácsból választ; több kattintást hozhat, de kérdés, hogy több döntést is.",
   "metric": "Összes kattintás vs. rendelés; a kettő különbsége mutatja, böngésznek vagy döntenek.",
   "todo": [
    "A saját lista nincs bontva rendelési előzmény szerint, ezért a levél nem hivatkozik tavalyi vagy karácsonyi rendelésre.",
-   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy."
+   "Véletlenszerű harmadolás az EmailOctopusban: mindhárom sablon ugyanakkor, hasonló méretű csoportnak megy.",
+   "Tamás november 12-i kérései beépítve: díjmentes logózás a levél elején, *-gal és lábléc-feltétellel (csak egyszínű logónyomtatás), új nyitómondatok és Ui. Az Ui. „gyermekeiknek” része csak akkor maradjon, ha a webshopban van karácsonyi gyerekcsomag."
   ],
   "live_fields": [
    "{{FirstName|default(\"Partnerünk\")}}"
@@ -542,12 +546,12 @@ const META = [
   "kind": "warm",
   "layout": "Szoftvercégek (saját címre)",
   "theme": "csapat",
-  "subj": "Karácsonyi ajándék a home office-ba is",
-  "pre": "Ön feltölti a névsort, mi csomagoljuk és mindenkinek a saját címére visszük. Egy számla.",
-  "subj_raw": "Karácsonyi ajándék a home office-ba is",
-  "pre_raw": "Ön feltölti a névsort, mi csomagoljuk és mindenkinek a saját címére visszük. Egy számla.",
-  "test": "WellData-szegmens, a „mindenkinek a saját címére” sablonra épül. Hibrid és remote csapatnál a logisztika a gond. A kártyák fiatal, kávézós csapathoz illenek (Fekete Elegancia, Délutáni csipegetős, Black Style).",
-  "hyp": "Az office manager a címenkénti kiszállításra reagál, nem a darabárra.",
+  "subj": "Karácsonyi ajándék az egész csapatnak",
+  "pre": "Céges karácsonyi ajándékcsomagok a csapatnak, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
+  "subj_raw": "Karácsonyi ajándék az egész csapatnak",
+  "pre_raw": "Céges karácsonyi ajándékcsomagok a csapatnak, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
+  "test": "WellData-szegmens: az egész csapatnak szóló ajándékra épít, a saját címre szállítás másodlagos előny. A kártyák fiatal, kávézós csapathoz illenek (Fekete Elegancia, Délutáni csipegetős, Black Style).",
+  "hyp": "Az office manager a logós csapatajándékra és az egyszerű rendelésre reagál, nem a darabárra.",
   "metric": "Kattintás és ajánlatkérés (névsor-feltöltés).",
   "todo": [
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
@@ -696,28 +700,6 @@ const META = [
    "{{FirstName|default(\"Partnerünk\")}}"
   ],
   "code": "HL06-3"
- },
- {
-  "id": "hl07-1",
-  "seg": "welcome",
-  "var": "A",
-  "kind": "welcome",
-  "layout": "Üdvözlő: három út + határidők",
-  "subj": "Így rendelhet céges ajándékot a Tomextől",
-  "pre": "Minden kérdéssel egy címre írhat. A levélben a három dátum, ami idén számít.",
-  "test": "Tárgysor-teszt: haszon („Három út a céges ajándékhoz”) vs. köszönet („Köszönjük, hogy feliratkozott”).",
-  "hyp": "Az első levélnél a konkrét haszon többet nyittat meg, mint az udvariassági tárgy.",
-  "metric": "Kattintás és közvetlen válasz az első 72 órában.",
-  "todo": [
-   "EmailOctopus automatizmus: feliratkozás után azonnal. A sorozat 2. és 3. levele a stratégiai docban."
-  ],
-  "subj_raw": "Így rendelhet céges ajándékot a Tomextől",
-  "pre_raw": "Minden kérdéssel egy címre írhat. A levélben a három dátum, ami idén számít.",
-  "theme": "klasszikus",
-  "live_fields": [
-   "{{FirstName|default(\"Partnerünk\")}}"
-  ],
-  "code": "HL07-1"
  }
 ];
 const GROUPS = [
@@ -741,11 +723,6 @@ const GROUPS = [
   "l": "D · Gourmet vs Office sztori-sorozat",
   "w": "HL06 · november 24., december 1. és 3.",
   "tag": "Külön formátum"
- },
- {
-  "k": "e",
-  "l": "E · Automatikus",
-  "w": "HL07 · feliratkozás után azonnal"
  }
 ];
 const SEGS = [
@@ -797,14 +774,6 @@ const SEGS = [
   "n": "Sztorival indít, utána csomag",
   "d": "Kínos irodai ajándékok, Réka és a zöld doboz",
   "story": true
- },
- {
-  "k": "welcome",
-  "g": "e",
-  "t": "Új feliratkozó",
-  "c": "var(--teal)",
-  "n": "Welcome",
-  "d": "Három út és a határidők"
  }
 ];
 const $ = id => document.getElementById(id);
