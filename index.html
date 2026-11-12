@@ -60,6 +60,11 @@ h1{margin:0;font-size:28px;line-height:1.15;font-weight:800;color:var(--brand);t
 .codes b{color:var(--ink)}
 .codes .row{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px}
 .group.g-d{border:2px dashed var(--story);background:var(--storybg)}
+.group.g-e{grid-column:span 12;border:2px solid #C9A866;background:linear-gradient(180deg,#FBF6EC,var(--surface))}
+.group.g-e .ghead .l{color:#8C6A2F}
+.group.g-e .ghead .tag{background:#8C6A2F}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .group.g-e{background:#211c14}}
+:root[data-theme="dark"] .group.g-e{background:#211c14}
 .ghead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:2px 4px 0}
 .ghead .l{font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
 .group.g-d .ghead .l{color:var(--story)}
@@ -118,19 +123,40 @@ iframe.mobile{width:390px;border-radius:26px;box-shadow:0 0 0 10px #1f2937}
 .upd h3{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
 .upd ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
 .upd li::marker{color:var(--teal)}
+.news{background:var(--surface);border:2px solid var(--teal);border-radius:16px;padding:16px 18px;margin:0 0 20px}
+.news h2{margin:0 0 4px;font-size:16px;color:var(--brand)}
+.news .sub{margin:0 0 12px;font-size:13px;color:var(--muted)}
+.news ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.news li{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13.5px;color:var(--ink);min-width:0}
+.news li b{display:block;margin-bottom:4px;color:var(--brand)}
+.news li a{color:var(--teal);font-weight:700;text-decoration:none}
+.news li a:hover{text-decoration:underline}
+.news .tag{display:inline-block;background:var(--teal);color:#fff;border-radius:999px;padding:1px 8px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-right:6px;vertical-align:1px}
 .foot{margin-top:16px;font-size:12.5px;color:var(--muted);max-width:90ch}
 </style>
 
 <header class="topbar">
   <div class="topbar-in">
     <div class="by"><img src="doupla-logo.png" width="44" height="44" alt="DOUPLA"><span>by <b>DOUPLA</b> Creative &amp; Digital</span></div>
-    <div class="for">Tomex Gourmet · karácsony 2026 · hírlevél-előnézet · <b style="color:#E6F1EF;font-family:var(--mono);font-weight:500;background:#21514E;padding:2px 8px;border-radius:6px;white-space:nowrap">v56 · 2026. 11. 12.</b></div>
+    <div class="for">Tomex Gourmet · karácsony 2026 · hírlevél-előnézet · <b style="color:#E6F1EF;font-family:var(--mono);font-weight:500;background:#21514E;padding:2px 8px;border-radius:6px;white-space:nowrap">v61 · 2026. 11. 12.</b></div>
   </div>
 </header>
 <div class="wrap">
   <h1>Tomex Gourmet karácsonyi hírlevelek</h1>
   <p class="lead">Itt látszik az összes levél úgy, ahogy a címzett megkapja. EmailOctopusból megy: a saját ügyféllistára (egy üzenet, több sablon A/B tesztre) és a WellData-listákra, ahol minden szegmens saját levelet kap. Minden levélnek van egy kódja; ugyanez áll a státusztáblában és a linkek utm_content mezőjének elején.</p>
 
+  <section class="news" aria-label="Új változatok">
+    <h2><span class="tag">Új</span>November 12. este: célzott változatok a délutáni eredmények alapján</h2>
+    <p class="sub">A mai küldésből kiderült, hogy a határidős tárgysor és a termékkártyák működnek, a csapatos Mikulás viszont az ügyvédeknek és a szoftvercégeknek nem kell. Ezért ezek a levelek és listák változtak.</p>
+    <ul>
+      <li><b>HL02-NN · NN-tanácsadók</b>38 biztosítási tanácsadó a saját listáról. Egyéni vállalkozók, ezért nem csapatajándékot kapnak, hanem ügyfélajándékot: az ő nevükkel vagy logójukkal, ügyfelenként külön címre szállítva. Hétfőn megy. <a href="#hl02-nn">Megnézem &rarr;</a></li>
+      <li><b>HL02-PAT · Patikák</b>40 patika- és gyógyszertári cím. A levél a patika csapatának szól, patikánként külön szállítással, ugyanazzal a három csomaggal, mint a nyertes HL02-A. Hétfőn és kedden megy. <a href="#hl02-pat">Megnézem &rarr;</a></li>
+      <li><b>HL04 · a négy WellData karácsonyi levél</b>Könyvelő, szoftvercég, ügyvéd, egyszemélyes szoftvercég. Határidős tárgysor, kiemelt „már nettó 5&nbsp;746 Ft-tól”, a megajándékozás került előre, mintacsomag nincs. Szerdától megy, a 24–25-i adaghoz logózási ajánlat nélküli változat is van. <a href="#hl04-kony">Megnézem &rarr;</a></li>
+      <li><b>A listákban (TOMEX hírlevelek tábla)</b>A hideg listán az info@, iroda@ típusú címek az utolsó napokra kerültek, hogy ha sokan leiratkoznak, az utolsó adag elhagyható legyen. A MOL, a HELL és a Tomex saját címei kikerültek a tömeges küldésből (MOL és HELL fül). Új fülek: Kulcscégek (sales) az értékesítőknek, Döntésre vár a versenytársakkal és ügynökségekkel.</li>
+      <li><b>HL02-KEY · hat kulcscég</b>A Siemens, az EPAM, a Groupama, az NN központ, az Accor és a Givaudan 34–54 kontakttal van a listán, és ezek az emberek külön-külön rendelnek. Ők egy rövid, szinte csak szöveges levelet kapnak a cég nevével: a saját csapatuknak a webshopban rendelhetnek, vagy egy összevont céges ajánlatot kérhetnek csapatonkénti (az Accornál szállodánkénti) szállítással és számlázással. 88 cím, hétfőn és kedden megy. <a href="#hl02-key-sie">Megnézem &rarr;</a></li>
+      <li><b>Versenytársak a saját listán</b>Öt reklámajándék-forgalmazó kapná a leveleket, ezt a weboldalukon ellenőriztük: Promix, Promotrade, Promopoint, Symbol Reklám és 1001 Reklámajándék, összesen 18 még kiküldendő cím. A Promopoint emblémázott ajándékdobozt is postáz közvetlenül a megajándékozottnak, vagyis ugyanazt csinálja, mint a Tomex Gourmet. Javaslat: kizárni őket, hacsak nem viszonteladóként vásárolnak a Tomextől. A Bistro Reklám, a Maxxon Reklám és a DigitálisReklám a neve ellenére nem versenytárs, ők maradnak.</li>
+    </ul>
+  </section>
 
   <ol class="how" aria-label="Hogyan nézd">
     <li><b>Válassz csoportot</b> lent: kinek szól a levél, és mikor megy ki.</li>
@@ -138,7 +164,7 @@ iframe.mobile{width:390px;border-radius:26px;box-shadow:0 0 0 10px #1f2937}
     <li><b>Nézd meg asztalin és mobilon.</b> A „Mintaadat” egy kitalált címzettel tölti ki, az „Éles” az EmailOctopus mezőit mutatja.</li>
   </ol>
 
-  <div class="codes"><b>Kódok.</b> HL + kampányszám, utána a változat: betű = párhuzamos változat (A/B teszt), szám = a sorozat része, KONY / SZOF / UGYV / IDOS = WellData-szegmens (könyvelő, szoftvercég, ügyvédi iroda, idősek otthona).<div class="row"><span><span class="code">HL01</span>Mikulás</span><span><span class="code">HL02</span>Meleg</span><span><span class="code">HL04</span>Hideg</span><span><span class="code">HL05</span>Tíz pillanat</span><span><span class="code">HL06</span>Gourmet vs Office</span></div></div>
+  <div class="codes"><b>Kódok.</b> HL + kampányszám, utána a változat: betű = párhuzamos változat (A/B teszt), szám = a sorozat része, KONY / SZOF / UGYV / IDOS = WellData-szegmens (könyvelő, szoftvercég, ügyvédi iroda, idősek otthona).<div class="row"><span><span class="code">HL01</span>Mikulás</span><span><span class="code">HL02</span>Meleg</span><span><span class="code">HL04</span>Hideg</span><span><span class="code">HL05</span>Tíz pillanat</span><span><span class="code">HL06</span>Gourmet vs Office</span><span><span class="code">HL08</span>C-level, személyes</span></div></div>
   <div class="groups" id="groups"></div>
 
   <details class="themes-d">
@@ -466,6 +492,52 @@ const META = [
   ]
  },
  {
+  "id": "hl02-nn",
+  "code": "HL02-NN",
+  "seg": "meleg",
+  "var": "NN",
+  "kind": "warm",
+  "layout": "NN-tanácsadók · ügyfélajándék",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék az ügyfeleinek: rendelés dec. 5-ig",
+  "pre": "Ajándékcsomagok az ügyfeleinek, az Ön nevével vagy logójával, már nettó 5 746 Ft-tól. Ügyfelenként külön címre is szállítjuk.",
+  "subj_raw": "Karácsonyi ajándék az ügyfeleinek: rendelés dec. 5-ig",
+  "pre_raw": "Ajándékcsomagok az ügyfeleinek, az Ön nevével vagy logójával, már nettó 5 746 Ft-tól. Ügyfelenként külön címre is szállítjuk.",
+  "test": "Új, 11.12. este. 38 NN biztosítási tanácsadó a saját listán (partner.nn.hu). Ők egyéni vállalkozók: az ügyfeleiknek vesznek ajándékot, nem kollégáknak. A HL02-A szerkezete, ügyfélajándékra írva, ügyfelenkénti kiszállítással.",
+  "hyp": "A tanácsadó az ügyfélajándékra kattint; a csapatos HL02-A nekik nem szól.",
+  "metric": "Ajánlatkérés (válasz), csomagkattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Hétfőn (11.16.) megy, a HL02-A-val együtt; a Meleg fülön a Változat oszlop már HL02-NN / HL02-PAT.",
+   "A díjmentes logózás november 20-ig szól, hétfőn még érvényes."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-pat",
+  "code": "HL02-PAT",
+  "seg": "meleg",
+  "var": "PAT",
+  "kind": "warm",
+  "layout": "Patikák · a patika csapatának",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék a patika csapatának: rendelés dec. 5-ig",
+  "pre": "Ajándékcsomagok a patika munkatársainak, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "subj_raw": "Karácsonyi ajándék a patika csapatának: rendelés dec. 5-ig",
+  "pre_raw": "Ajándékcsomagok a patika munkatársainak, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. 40 patika- és gyógyszertári cím a saját listán (Benü, Patika Plusz, Csillag patikák és egyéni patikák). A HL02-A szerkezete, a patika csapatának szóló megszólítással és patikánkénti szállítással.",
+  "hyp": "A patikavezető a saját helyzetére írt levélre gyorsabban válaszol.",
+  "metric": "Ajánlatkérés (válasz), csomagkattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Hétfőn (11.16.) megy, a HL02-A-val együtt; a Meleg fülön a Változat oszlop már HL02-NN / HL02-PAT.",
+   "A díjmentes logózás november 20-ig szól, hétfőn még érvényes."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
   "id": "hl02-b",
   "code": "HL02-B",
   "seg": "meleg",
@@ -515,6 +587,150 @@ const META = [
   ]
  },
  {
+  "id": "hl02-key-sie",
+  "code": "HL02-KEY-SIE",
+  "seg": "kulcs",
+  "var": "Siemens",
+  "kind": "warm",
+  "layout": "Siemens · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék a Siemens csapatainak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék a Siemens csapatainak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. Siemens: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: csapatonként vagy telephelyenként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-key-epa",
+  "code": "HL02-KEY-EPA",
+  "seg": "kulcs",
+  "var": "EPAM",
+  "kind": "warm",
+  "layout": "EPAM · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék az EPAM csapatainak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék az EPAM csapatainak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. EPAM: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: csapatonként vagy irodánként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-key-gro",
+  "code": "HL02-KEY-GRO",
+  "seg": "kulcs",
+  "var": "Groupama",
+  "kind": "warm",
+  "layout": "Groupama · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék a Groupama csapatainak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék a Groupama csapatainak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. Groupama: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: csapatonként vagy irodánként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-key-nn",
+  "code": "HL02-KEY-NN",
+  "seg": "kulcs",
+  "var": "NN",
+  "kind": "warm",
+  "layout": "NN · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék az NN csapatainak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék az NN csapatainak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. NN: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: csapatonként vagy területi irodánként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-key-acc",
+  "code": "HL02-KEY-ACC",
+  "seg": "kulcs",
+  "var": "Accor",
+  "kind": "warm",
+  "layout": "Accor · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék az Accor szállodáinak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék az Accor szállodáinak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az összes szállodának, hotelenként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az összes szállodának, hotelenként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. Accor: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: szállodánként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl02-key-giv",
+  "code": "HL02-KEY-GIV",
+  "seg": "kulcs",
+  "var": "Givaudan",
+  "kind": "warm",
+  "layout": "Givaudan · összevont céges ajánlat",
+  "theme": "klasszikus",
+  "subj": "Karácsonyi ajándék a Givaudan csapatainak: rendelés dec. 5-ig",
+  "subj_raw": "Karácsonyi ajándék a Givaudan csapatainak: rendelés dec. 5-ig",
+  "pre": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "pre_raw": "Egy rendelés az egész cégnek, csapatonként külön szállítva, már nettó 5 746 Ft-tól. Díjmentes logózás november 20-ig.",
+  "test": "Új, 11.12. este. Givaudan: sok kontakt ugyanattól a cégtől, akik külön-külön rendelnek. A levél a saját csapat rendelését is engedi, de egy összevont céges rendelést kínál: csapatonként vagy telephelyenként külön szállítás, külön számlázás, egy kapcsolattartó.",
+  "hyp": "Aki több csapat ajándékát intézi, az összevont ajánlatot kéri; a többiek a webshopban rendelnek, mint eddig.",
+  "metric": "Összevont ajánlatkérés (válasz), webshop-kattintás, rendelés december 5-ig, a HL02-A-hoz mérve.",
+  "todo": [
+   "Az értékesítő a küldés előtt hívja fel a cég 1–2 legaktívabb kontaktját (Kulcscégek fül).",
+   "Ha a Tomex ad mennyiségi kedvezményt összevont rendelésre, az legyen a második bekezdés első mondata.",
+   "Sima, majdnem csak szöveges levél: kevés kép, jól kézbesíthető, a 2. hullám (catch-all) címeinek is jó."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
   "id": "hl04-kony",
   "code": "HL04-KONY",
   "seg": "hidegwd",
@@ -522,19 +738,21 @@ const META = [
   "kind": "warm",
   "layout": "Könyvelők, adószakértők (keret)",
   "theme": "klasszikus",
-  "subj": "Karácsonyi ajándék az irodának 5 746 Ft-tól",
-  "pre": "Kattintson a keretére, és csak az abba illő csomagokat mutatjuk, logóval, egy számlával.",
-  "subj_raw": "Karácsonyi ajándék az irodának 5 746 Ft-tól",
-  "pre_raw": "Kattintson a keretére, és csak az abba illő csomagokat mutatjuk, logóval, egy számlával.",
-  "test": "WellData-szegmens, a keretválasztós sablonra épül. Egy könyvelő előbb a keretet nézi, utána a csomagot.",
-  "hyp": "Kis irodánál a 10 darabos minimum akadály; az ügyfélajándékkal együtt kijön a tíz.",
+  "subj": "Céges karácsonyi ajándék: rendelés dec. 5-ig",
+  "pre": "Ügyfeleknek és kollégáknak, már nettó 5 746 Ft-tól. Rendelési határidő: december 5.",
+  "subj_raw": "Céges karácsonyi ajándék: rendelés dec. 5-ig",
+  "pre_raw": "Ügyfeleknek és kollégáknak, már nettó 5 746 Ft-tól. Rendelési határidő: december 5.",
+  "test": "Az ügyfelek és a kollégák megajándékozása a fő üzenet (a lista fele egyszemélyes iroda, nekik nincs kolléga). Határidős tárgysor, az ár a levélben kiemelve.",
+  "hyp": "A könyvelő az ügyfélajándékra kattint, nem a csapatajándékra: a HL01-KONY kétszer 0 kattintást hozott.",
   "metric": "Csempekattintás (melyik keret), ajánlatkérés.",
   "todo": [
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
    "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon.",
    "A 10 darabos minimum minden csomagra érvényes.",
    "Tíz Narancsos álom nettó 57 460 Ft: darabár × 10, szállítás és logó nélkül.",
-   "Ár szerinti szűrő-URL: Tomex IT. Addig a csempék a Csomagvariációk oldalra mutatnak."
+   "Ár szerinti szűrő-URL: Tomex IT. Addig a csempék a Csomagvariációk oldalra mutatnak.",
+   "A díjmentes logózás november 20-ig szól: a november 24–25-i küldéshez a „-nov24” változat megy (logózási ajánlat nélkül), hacsak a Tomex nem hosszabbít.",
+   "A „már nettó 5 746 Ft-tól” és a „készlet erejéig” állítást a Tomex hagyja jóvá a karácsonyi csomagokra is."
   ],
   "live_fields": []
  },
@@ -546,17 +764,19 @@ const META = [
   "kind": "warm",
   "layout": "Szoftvercégek (saját címre)",
   "theme": "csapat",
-  "subj": "Karácsonyi ajándék az egész csapatnak",
-  "pre": "Céges karácsonyi ajándékcsomagok a csapatnak, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
-  "subj_raw": "Karácsonyi ajándék az egész csapatnak",
-  "pre_raw": "Céges karácsonyi ajándékcsomagok a csapatnak, díjmentes logózással november 20-ig. Rendelés december 5-ig.",
-  "test": "WellData-szegmens: az egész csapatnak szóló ajándékra épít, a saját címre szállítás másodlagos előny. A kártyák fiatal, kávézós csapathoz illenek (Fekete Elegancia, Délutáni csipegetős, Black Style).",
-  "hyp": "Az office manager a logós csapatajándékra és az egyszerű rendelésre reagál, nem a darabárra.",
+  "subj": "Karácsonyi ajándék a csapatnak: rendelés dec. 5-ig",
+  "pre": "Lepje meg kollégáit karácsonyra! Ajándékcsomagok már nettó 5 746 Ft-tól, a cég logójával.",
+  "subj_raw": "Karácsonyi ajándék a csapatnak: rendelés dec. 5-ig",
+  "pre_raw": "Lepje meg kollégáit karácsonyra! Ajándékcsomagok már nettó 5 746 Ft-tól, a cég logójával.",
+  "test": "A csapat megajándékozása a fő üzenet, a logó és a szállítás másodlagos. Határidős tárgysor, legolcsóbb kártya elöl, a szűkítő megfogalmazások kikerültek.",
+  "hyp": "A határidős tárgysor és az elöl lévő termékkártyák több kattintást hoznak, mint a HL01-SZOF 1,05%-a.",
   "metric": "Kattintás és ajánlatkérés (névsor-feltöltés).",
   "todo": [
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
    "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon.",
-   "Egyéni címre szállítás díja és határideje: Tomex-adat."
+   "Egyéni címre szállítás díja és határideje: Tomex-adat.",
+   "A díjmentes logózás november 20-ig szól: a november 24–25-i küldéshez a „-nov24” változat megy (logózási ajánlat nélkül), hacsak a Tomex nem hosszabbít.",
+   "A „már nettó 5 746 Ft-tól” és a „készlet erejéig” állítást a Tomex hagyja jóvá a karácsonyi csomagokra is."
   ],
   "live_fields": []
  },
@@ -568,18 +788,20 @@ const META = [
   "kind": "warm",
   "layout": "Ügyvédi irodák (ügyfélajándék)",
   "theme": "klasszikus",
-  "subj": "Karácsonyi ügyfélajándék az iroda logójával",
-  "pre": "Rendelés előtt látványtervet küldünk az iroda logójával. Logózás november 20-ig díjmentes.",
-  "subj_raw": "Karácsonyi ügyfélajándék az iroda logójával",
-  "pre_raw": "Rendelés előtt látványtervet küldünk az iroda logójával. Logózás november 20-ig díjmentes.",
-  "test": "WellData-szegmens, az „előbb látja, utána dönt” sablonra épül. Az ajándék az iroda nevében megy az ügyfélhez, itt a jó hírnév a tét: rendelés előtt látványterv a logóval.",
-  "hyp": "A látványterv és a címenkénti kiszállítás erősebb érv, mint az ár.",
+  "subj": "Karácsonyi ügyfélajándék: rendelés dec. 5-ig",
+  "pre": "Ügyfeleinek, az iroda logójával, már nettó 5 746 Ft-tól. Rendelés előtt látványtervet küldünk.",
+  "subj_raw": "Karácsonyi ügyfélajándék: rendelés dec. 5-ig",
+  "pre_raw": "Ügyfeleinek, az iroda logójával, már nettó 5 746 Ft-tól. Rendelés előtt látványtervet küldünk.",
+  "test": "Ügyfélajándék a fő üzenet, a látványterv a levélben marad. Határidős tárgysor, az ár kiemelve.",
+  "hyp": "Az ügyvédi iroda ügyfélajándékra reagál; a HL01-UGYV csapatos levele 4,12% leiratkozást hozott.",
   "metric": "Csomagkattintás, válasz, rendelés december 5-ig.",
   "todo": [
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
    "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon.",
    "Névre szóló megszólítás: „Tisztelt Dr. [irodavezető neve]!”, a FirstName mezőből (üresen „Tisztelt Hölgyem/Uram!”).",
-   "A Gasztro Gold alkoholt tartalmaz. Ha a Tomex hideg megkeresésben nem akarja elöl látni, a Fekete Elegancia kerüljön előre."
+   "A Gasztro Gold alkoholt tartalmaz. Ha a Tomex hideg megkeresésben nem akarja elöl látni, a Fekete Elegancia kerüljön előre.",
+   "A díjmentes logózás november 20-ig szól: a november 24–25-i küldéshez a „-nov24” változat megy (logózási ajánlat nélkül), hacsak a Tomex nem hosszabbít.",
+   "A „már nettó 5 746 Ft-tól” és a „készlet erejéig” állítást a Tomex hagyja jóvá a karácsonyi csomagokra is."
   ],
   "live_fields": [
    "{{FirstName|default(\"Hölgyem/Uram\")}}"
@@ -593,17 +815,19 @@ const META = [
   "kind": "warm",
   "layout": "Egyszemélyes szoftvercégek (ügyfélajándék)",
   "theme": "klasszikus",
-  "subj": "Ügyfélajándék karácsonyra, a cég nevével",
-  "pre": "Ügyfélajándék a cég logójával, megrendelőnként külön címre szállítva.",
-  "subj_raw": "Ügyfélajándék karácsonyra, a cég nevével",
-  "pre_raw": "Ügyfélajándék a cég logójával, megrendelőnként külön címre szállítva.",
-  "test": "WellData-szegmens: a szoftvercégek közül azok, ahol a cégadatbázis szerint 0 a létszám. Nekik nincs csapatuk, de megrendelőik vannak, ezért ügyfélajándékot kínálunk, logóval és címenkénti kiszállítással.",
-  "hyp": "Az egyszemélyes cég tulajdonosa a néhány kulcsügyfelének vesz ajándékot, ha a logó és a címenkénti kiszállítás le van véve róla.",
+  "subj": "Karácsonyi ügyfélajándék: rendelés dec. 5-ig",
+  "pre": "Megrendelőinek, a cég logójával, már nettó 5 746 Ft-tól. Rendelési határidő: december 5.",
+  "subj_raw": "Karácsonyi ügyfélajándék: rendelés dec. 5-ig",
+  "pre_raw": "Megrendelőinek, a cég logójával, már nettó 5 746 Ft-tól. Rendelési határidő: december 5.",
+  "test": "Ügyfélajándék a megrendelőknek, határidős tárgysorral, kiemelt árral.",
+  "hyp": "Az egyszemélyes cég a megrendelőinek vesz ajándékot, ha a logó és a kiszállítás le van véve róla.",
   "metric": "Csomagkattintás, válasz, rendelés december 5-ig.",
   "todo": [
    "Név nélküli WellData-lista: a megszólítás „Tisztelt Hölgyem/Uram!”, a lábléc a cég nyilvános elérhetőségére hivatkozik.",
    "Külön küldő aldomainről, kis tételekben, hogy a saját listák kézbesítése ne romoljon.",
-   "A 10 darabos minimum érvényes: egy kis cégnél ez lehet akadály, a levél ügyfélajándékként kínálja."
+   "A 10 darabos minimum érvényes: egy kis cégnél ez lehet akadály, a levél ügyfélajándékként kínálja.",
+   "A díjmentes logózás november 20-ig szól: a november 24–25-i küldéshez a „-nov24” változat megy (logózási ajánlat nélkül), hacsak a Tomex nem hosszabbít.",
+   "A „már nettó 5 746 Ft-tól” és a „készlet erejéig” állítást a Tomex hagyja jóvá a karácsonyi csomagokra is."
   ],
   "live_fields": []
  },
@@ -700,6 +924,60 @@ const META = [
    "{{FirstName|default(\"Partnerünk\")}}"
   ],
   "code": "HL06-3"
+ },
+ {
+  "id": "hl08-hell",
+  "code": "HL08-HELL",
+  "seg": "vip",
+  "var": "HELL",
+  "kind": "warm",
+  "layout": "HELL · vezetők, HELL-színekben",
+  "theme": "premium",
+  "subj": "Egy karácsonyi doboz, koffein nélkül",
+  "pre": "A „pokolian jó” jelzőt Önök foglalták le, ezért mi csak annyit mondunk: ezek a dobozok nagyon jók.",
+  "subj_raw": "Egy karácsonyi doboz, koffein nélkül",
+  "pre_raw": "A „pokolian jó” jelzőt Önök foglalták le, ezért mi csak annyit mondunk: ezek a dobozok nagyon jók.",
+  "test": "Nem A/B teszt, kézzel küldött személyes levél. A poén a márkán fut végig: tárgysorban a koffein, előnézetben a „pokolian jó”, a levélben a lassítás (pezsgő, egri bor), az Ui.-ban a szándékosan kihagyott kávés csomag. Tartalék tárgy: „A »pokolian jó« már foglalt, tudjuk”.",
+  "hyp": "Egy energiaital-cég vezetője naponta kap energiaitalos poént; ez róluk szól, mégsem rajtuk nevet, és a doboz tartalmával (lassítás) válaszol rá.",
+  "metric": "Válasz Tamásnak, csomagkattintás, rendelés december 5-ig.",
+  "todo": [
+   "Ne EmailOctopusból menjen: Tamás saját postafiókjából, egyenként, címzettenként átnézve. Néhány C-level címzettnél egy hírlevélküldő láblécénél és követőkódjainál többet ér, hogy valóban tőle jön.",
+   "Az aláírás most az info@tomexgourmet.hu címre és a központi számra mutat. Ha Tamásé a levél, az ő e-mail címe és mobilszáma kerüljön be.",
+   "Megszólítás: magázva, keresztnéven („Kedves Gábor!”). Ha Tamás tegeződik a címzettel, a szöveget tegező változatra írjuk át.",
+   "Partnerlogó: a fejlécben és a szövegben a címzett cég logója és neve szerepel. A logót a Tomex nyomdai archívumából kell betenni (fehér változat a HELL-hez, színes a MOL-hoz), partner-hell-logo.png és partner-mol-logo.png néven, 40 px magasra. A színek márkaközeliek, a pontos kódokat a hivatalos arculati kézikönyvből érdemes ellenőrizni.",
+   "A három csomag: Gasztro Gold (kulcspartner), Hungarikum (külföldi partner), Thummerer Esték (csapat). A kávés Fekete Elegancia szándékosan maradt ki, erre épül az Ui.",
+   "A Hungarikum külföldi partnernek szól: ellenőrizni, szállít-e a Tomex külföldi címre. Ha nem, a csomag a magyar irodán keresztül jut el, és ezt egy mondatban érdemes jelezni."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
+ },
+ {
+  "id": "hl08-mol",
+  "code": "HL08-MOL",
+  "seg": "vip",
+  "var": "MOL",
+  "kind": "warm",
+  "layout": "MOL · vezetők, MOL-színekben",
+  "theme": "premium",
+  "subj": "Céges karácsonyi ajándék, kútmegálló nélkül",
+  "pre": "Karácsonyi csomagok a csapatnak és a partnereknek, az Önök logójával, egyenesen az ajtóig. Rendelés december 5-ig.",
+  "subj_raw": "Céges karácsonyi ajándék, kútmegálló nélkül",
+  "pre_raw": "Karácsonyi csomagok a csapatnak és a partnereknek, az Önök logójával, egyenesen az ajtóig. Rendelés december 5-ig.",
+  "test": "Nem A/B teszt, kézzel küldött személyes levél. A poén az utolsó pillanatos kúti karácsonyi ajándék: a cím szerint idén nem a kúton dől el a céges ajándék, a törzs ezt bontja ki, az Ui.-ban a hűségpont. Tartalék tárgy: „Idén nem a kúton dől el a céges ajándék”.",
+  "hyp": "A kúti last minute ajándék önironikus, de bók: elismeri, hogy a MOL menti meg a karácsonyok egy részét, és világosan megmondja, mit kínálunk helyette.",
+  "metric": "Válasz Tamásnak, csomagkattintás, rendelés december 5-ig.",
+  "todo": [
+   "Ne EmailOctopusból menjen: Tamás saját postafiókjából, egyenként, címzettenként átnézve. Néhány C-level címzettnél egy hírlevélküldő láblécénél és követőkódjainál többet ér, hogy valóban tőle jön.",
+   "Az aláírás most az info@tomexgourmet.hu címre és a központi számra mutat. Ha Tamásé a levél, az ő e-mail címe és mobilszáma kerüljön be.",
+   "Megszólítás: magázva, keresztnéven („Kedves Gábor!”). Ha Tamás tegeződik a címzettel, a szöveget tegező változatra írjuk át.",
+   "Partnerlogó: a fejlécben és a szövegben a címzett cég logója és neve szerepel. A logót a Tomex nyomdai archívumából kell betenni (fehér változat a HELL-hez, színes a MOL-hoz), partner-hell-logo.png és partner-mol-logo.png néven, 40 px magasra. A színek márkaközeliek, a pontos kódokat a hivatalos arculati kézikönyvből érdemes ellenőrizni.",
+   "A három csomag: Gasztro Gold (kulcspartner), Mama kedvence (terepen, autóban dolgozó kollégák), Hungarikum (régiós partnerek).",
+   "A Hungarikum régiós partnereknek szól: ellenőrizni, szállít-e a Tomex külföldi címre. Ha nem, a csomag a magyar irodán keresztül jut el hozzájuk, és ezt egy mondatban érdemes jelezni."
+  ],
+  "live_fields": [
+   "{{FirstName|default(\"Partnerünk\")}}"
+  ]
  }
 ];
 const GROUPS = [
@@ -723,6 +1001,12 @@ const GROUPS = [
   "l": "D · Gourmet vs Office sztori-sorozat",
   "w": "HL06 · november 24., december 1. és 3.",
   "tag": "Külön formátum"
+ },
+ {
+  "k": "e",
+  "l": "E · Vezetőknek, személyesen",
+  "w": "HL08 · Farkas Tamás nevében, kézzel küldve",
+  "tag": "C-level"
  }
 ];
 const SEGS = [
@@ -751,6 +1035,14 @@ const SEGS = [
   "d": "Három sablon A/B tesztre"
  },
  {
+  "k": "kulcs",
+  "g": "b",
+  "t": "Meleg · kulcscégek",
+  "c": "var(--teal)",
+  "n": "Összevont céges ajánlat",
+  "d": "Siemens, EPAM, Groupama, NN, Accor, Givaudan"
+ },
+ {
   "k": "hidegwd",
   "g": "b",
   "t": "WellData · hideg",
@@ -774,6 +1066,14 @@ const SEGS = [
   "n": "Sztorival indít, utána csomag",
   "d": "Kínos irodai ajándékok, Réka és a zöld doboz",
   "story": true
+ },
+ {
+  "k": "vip",
+  "g": "e",
+  "t": "Meleg kontaktok · C-level",
+  "c": "#8C6A2F",
+  "n": "HELL és MOL vezetőinek",
+  "d": "Márkára írt poén, a márka színeiben, Tamás aláírásával"
  }
 ];
 const $ = id => document.getElementById(id);
@@ -828,7 +1128,7 @@ function show(id){
 function render(){
   const m = cur;
   const sender = m.kind === 'cold' ? 'Szabó Márton (értékesítő postafiókja, külön domainről)'
-    : (m.code === 'X-NONE' ? 'Szabó Márton | Tomex Gourmet' : 'Tomex Gourmet');
+    : (m.seg === 'vip' ? 'Farkas Tamás | Tomex Group (saját postafiókból)' : 'Tomex Gourmet');
   $('from').innerHTML = 'Feladó: ' + sender + ' · ' + m.layout + `<span class="badge">${{klasszikus:'Klasszikus', premium:'Prémium', csapat:'Csapat', szoveg:'Sima szöveg', office:'Gourmet vs Office'}[m.theme]}</span>` + (m.seg === 'sztori' ? '<span class="badge red">Sztori-formátum · sztori, utána csomag</span>' : '');
   $('subj').textContent = live ? m.subj_raw : m.subj;
   $('pre').textContent = (live ? m.pre_raw : m.pre) || '(nincs előnézeti szöveg: sima levélnél a levél eleje látszik)';
@@ -849,5 +1149,6 @@ window.addEventListener('resize', () => setTimeout(fit, 200));
 window.addEventListener('hashchange', () => show(location.hash.slice(1)));
 show((location.hash || '').slice(1) || 'hl01-b');
 </script>
+
 
 </body></html>
