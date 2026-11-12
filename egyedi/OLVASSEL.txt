@@ -1,0 +1,15 @@
+Tomex Gourmet × HELL / MOL — HL08 személyes C-level levelek
+
+hl08-hell.html, hl08-mol.html
+  Előnézeti változat mintanévvel. Böngészőben nyisd meg.
+
+export/hl08-hell.html, export/hl08-mol.html
+  Éles változat {{FirstName}}, {{UnsubscribeURL}} és {{SenderInfoLine}} mezőkkel.
+
+images/
+  partner-hell-logo.png, partner-mol-logo.png: a fejléc partnerlogói (2x felbontás, átlátszó háttér)
+  tg-gold-wide-hell.jpg, tg-mama2-wide-mol.jpg: hero képek a márkalogóval a dobozon (illusztráció)
+  a többi: Tomex logók és csomagfotók
+  Kiküldés előtt a képeket publikus helyre kell feltölteni, és az src-ket abszolút URL-re cserélni.
+
+Kiküldés előtt: Tamás saját postafiókjából, egyenként; a telefonszám és az e-mail cím az övé legyen.
