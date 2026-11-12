@@ -8,7 +8,6 @@ export/hl08-hell.html, export/hl08-mol.html
 
 images/
   partner-hell-logo.png, partner-mol-logo.png: a fejléc partnerlogói (2x felbontás, átlátszó háttér)
-  tg-gold-wide-hell.jpg, tg-mama2-wide-mol.jpg: hero képek a márkalogóval a dobozon (illusztráció)
   a többi: Tomex logók és csomagfotók
   Kiküldés előtt a képeket publikus helyre kell feltölteni, és az src-ket abszolút URL-re cserélni.
 
